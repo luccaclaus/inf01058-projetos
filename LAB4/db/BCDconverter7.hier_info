@@ -1,0 +1,172 @@
+|BCDconverter7
+flag_N <= MUX21:inst12.W[3]
+S[0] <= MUX21:inst12.W[0]
+S[1] <= MUX21:inst12.W[1]
+S[2] <= MUX21:inst12.W[2]
+S[3] <= MUX21:inst12.W[3]
+op_sel[0] => MUX21:inst10.Sel
+op_sel[0] => MUX21:inst11.Sel
+op_sel[1] => MUX21:inst12.Sel
+A[0] => Lab01:inst7.A[0]
+A[0] => inst[0].IN0
+A[0] => inst2[0].IN1
+A[0] => inst3[0].IN0
+A[1] => Lab01:inst7.A[1]
+A[1] => inst[1].IN0
+A[1] => inst2[1].IN1
+A[1] => inst3[1].IN0
+A[2] => Lab01:inst7.A[2]
+A[2] => inst[2].IN0
+A[2] => inst2[2].IN1
+A[2] => inst3[2].IN0
+A[3] => Lab01:inst7.A[3]
+A[3] => inst[3].IN0
+A[3] => inst2[3].IN1
+A[3] => inst3[3].IN0
+B[0] => Lab01:inst7.B[0]
+B[0] => inst[0].IN1
+B[0] => inst2[0].IN0
+B[1] => Lab01:inst7.B[1]
+B[1] => inst[1].IN1
+B[1] => inst2[1].IN0
+B[2] => Lab01:inst7.B[2]
+B[2] => inst[2].IN1
+B[2] => inst2[2].IN0
+B[3] => Lab01:inst7.B[3]
+B[3] => inst[3].IN1
+B[3] => inst2[3].IN0
+flag_Z <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+displayOut <= decodG:inst1.G_out
+
+
+|BCDconverter7|MUX21:inst12
+W[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+W[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+W[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+Y[0] => inst1[0].IN0
+Y[1] => inst1[1].IN0
+Y[2] => inst1[2].IN0
+Y[3] => inst1[3].IN0
+Sel => inst1[3].IN1
+Sel => inst1[2].IN1
+Sel => inst1[1].IN1
+Sel => inst1[0].IN1
+Sel => inst2.IN0
+X[0] => inst[0].IN0
+X[1] => inst[1].IN0
+X[2] => inst[2].IN0
+X[3] => inst[3].IN0
+
+
+|BCDconverter7|MUX21:inst10
+W[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+W[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+W[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+Y[0] => inst1[0].IN0
+Y[1] => inst1[1].IN0
+Y[2] => inst1[2].IN0
+Y[3] => inst1[3].IN0
+Sel => inst1[3].IN1
+Sel => inst1[2].IN1
+Sel => inst1[1].IN1
+Sel => inst1[0].IN1
+Sel => inst2.IN0
+X[0] => inst[0].IN0
+X[1] => inst[1].IN0
+X[2] => inst[2].IN0
+X[3] => inst[3].IN0
+
+
+|BCDconverter7|Lab01:inst7
+Cout <= FA:inst3.Cout
+A[0] => HA:inst0.A
+A[1] => FA:inst1.A
+A[2] => FA:inst2.A
+A[3] => FA:inst3.A
+B[0] => HA:inst0.B
+B[1] => FA:inst1.B
+B[2] => FA:inst2.B
+B[3] => FA:inst3.B
+S[0] <= HA:inst0.S
+S[1] <= FA:inst1.S
+S[2] <= FA:inst2.S
+S[3] <= FA:inst3.S
+
+
+|BCDconverter7|Lab01:inst7|FA:inst3
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst3.IN0
+B => inst2.IN1
+B => inst3.IN1
+Cin => inst.IN1
+Cin => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCDconverter7|Lab01:inst7|FA:inst2
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst3.IN0
+B => inst2.IN1
+B => inst3.IN1
+Cin => inst.IN1
+Cin => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCDconverter7|Lab01:inst7|FA:inst1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst3.IN0
+B => inst2.IN1
+B => inst3.IN1
+Cin => inst.IN1
+Cin => inst4.IN1
+Cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCDconverter7|Lab01:inst7|HA:inst0
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst2.IN0
+B => inst.IN1
+B => inst2.IN1
+Cout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BCDconverter7|MUX21:inst11
+W[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+W[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+W[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+W[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+Y[0] => inst1[0].IN0
+Y[1] => inst1[1].IN0
+Y[2] => inst1[2].IN0
+Y[3] => inst1[3].IN0
+Sel => inst1[3].IN1
+Sel => inst1[2].IN1
+Sel => inst1[1].IN1
+Sel => inst1[0].IN1
+Sel => inst2.IN0
+X[0] => inst[0].IN0
+X[1] => inst[1].IN0
+X[2] => inst[2].IN0
+X[3] => inst[3].IN0
+
+
+|BCDconverter7|decodG:inst1
+G_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+BCD_in[0] => inst2.IN3
+BCD_in[0] => inst8.IN0
+BCD_in[1] => inst2.IN2
+BCD_in[1] => inst7.IN0
+BCD_in[2] => inst2.IN1
+BCD_in[2] => inst3.IN1
+BCD_in[2] => inst6.IN0
+BCD_in[3] => inst5.IN0
+BCD_in[3] => inst3.IN0
+
+
