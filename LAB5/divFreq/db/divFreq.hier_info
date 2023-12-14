@@ -1,0 +1,29 @@
+|divFreq
+saida <= inst77.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst77.ACLR
+reset => inst73.ACLR
+reset => inst71.ACLR
+reset => inst69.ACLR
+reset => inst67.ACLR
+reset => inst63.ACLR
+reset => inst65.ACLR
+reset => inst61.ACLR
+reset => inst58.ACLR
+reset => inst54.ACLR
+reset => inst52.ACLR
+reset => inst50.ACLR
+reset => inst48.ACLR
+reset => inst44.ACLR
+reset => inst46.ACLR
+reset => inst43.ACLR
+reset => inst39.ACLR
+reset => inst35.ACLR
+reset => inst33.ACLR
+reset => inst31.ACLR
+reset => inst29.ACLR
+reset => inst25.ACLR
+reset => inst27.ACLR
+reset => inst.ACLR
+clock => inst.CLK
+
+

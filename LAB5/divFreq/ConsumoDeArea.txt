@@ -1,0 +1,1 @@
+O consumo de área total é 50 tx, sendo 47 logic elements e 3 pins.
