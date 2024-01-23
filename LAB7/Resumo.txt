@@ -1,0 +1,4 @@
+Total logic elements: 48
+Total pins: 32
+Registradores: 4
+Atraso crítico: 9.156 (Fall-Fall)

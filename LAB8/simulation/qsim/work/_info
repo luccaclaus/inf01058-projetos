@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lucca\Desktop\LAB8\simulation\qsim
+vControleSemaforo
+Z1 !s100 8d8Iz?U>U`9FGH8VWiUM13
+Z2 I5;kW=hT=<8lQoa9OG3@[z1
+Z3 VE7g0>hkYZ4LMInY_<Hn]?0
+Z4 dC:\Users\lucca\Desktop\LAB8\simulation\qsim
+Z5 w1705979075
+Z6 8ControleSemaforo.vo
+Z7 FControleSemaforo.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ControleSemaforo.vo|
+Z10 o-work work -O0
+Z11 n@controle@semaforo
+!i10b 1
+!s85 0
+Z12 !s108 1705979076.246000
+Z13 !s107 ControleSemaforo.vo|
+!s101 -O0
+vControleSemaforo_vlg_check_tst
+!i10b 1
+Z14 !s100 zOSlbPU`fG>dbh8N3bIiQ3
+Z15 I3bXPA5C3m0bWnQY7Y1IJF2
+Z16 VF>3SY>PnzmV>GaPaRmmF_3
+R4
+R5
+Z17 8ControleSemaforo.vt
+Z18 FControleSemaforo.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1705979076.295000
+Z20 !s107 ControleSemaforo.vt|
+Z21 !s90 -work|work|ControleSemaforo.vt|
+!s101 -O0
+R10
+Z22 n@controle@semaforo_vlg_check_tst
+vControleSemaforo_vlg_sample_tst
+!i10b 1
+Z23 !s100 MhFb^9b6<=WY_[5nhLERU3
+Z24 I7;O8?Egl]dM2`L`D1<M603
+Z25 Vob:<Ekb[PDoa;Z9R=dZnW3
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@controle@semaforo_vlg_sample_tst
+vControleSemaforo_vlg_vec_tst
+!i10b 1
+Z27 !s100 QiHXRL0XMYHjM?4H[lIBU2
+Z28 IQQW56Ke55jIhN@T=5WK:A0
+Z29 VYK2O[Yl[K7k10zaaLm0kj1
+R4
+R5
+R17
+R18
+Z30 L0 208
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z31 n@controle@semaforo_vlg_vec_tst

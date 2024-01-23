@@ -1,0 +1,6 @@
+O total de área consumida pela FPGA é de 72, sendo ela composta por:
+- 37 logic elements
+- 5 pins
+- 30 total registers
+
+O atraso crítico é de 6.308ns na transição Rise.
