@@ -1,5 +1,5 @@
 Flow report for ControleSemaforo
-Tue Jan 23 00:04:35 2024
+Thu Jan 25 18:21:38 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 23 00:04:35 2024           ;
+; Flow Status                        ; Successful - Thu Jan 25 18:21:38 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ControleSemaforo                                ;
 ; Top-level Entity Name              ; ControleSemaforo                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/22/2024 23:48:03 ;
+; Start date & time ; 01/25/2024 18:21:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ControleSemaforo    ;
 +-------------------+---------------------+
@@ -75,9 +75,10 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 105658701594879.170597808344272 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 163683367378665.170621767304308 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                            ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --             ;
@@ -93,16 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4577 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 4899 MB             ; 00:00:03                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 4543 MB             ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4586 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4501 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4509 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4509 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4509 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4509 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:08     ; 1.0                     ; 4894 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4539 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4596 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4497 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,15 +108,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; lucca-pc         ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-AS9HS9B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-AS9HS9B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-AS9HS9B  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-AS9HS9B  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AS9HS9B  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -131,10 +124,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off ControleSemafor
 quartus_asm --read_settings_files=off --write_settings_files=off ControleSemaforo -c ControleSemaforo
 quartus_sta ControleSemaforo -c ControleSemaforo
 quartus_eda --read_settings_files=off --write_settings_files=off ControleSemaforo -c ControleSemaforo
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ControleSemaforo -c ControleSemaforo --vector_source=C:/Users/lucca/Desktop/LAB8/WaveformSemaforo.vwf --testbench_file=./simulation/qsim/ControleSemaforo.vt
-quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog ControleSemaforo -c ControleSemaforo
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ControleSemaforo -c ControleSemaforo --vector_source=C:/Users/lucca/Desktop/LAB8/WaveformSemaforo.vwf --testbench_file=./simulation/qsim/ControleSemaforo.vt
-quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog ControleSemaforo -c ControleSemaforo
 
 
 
