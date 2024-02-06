@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Neander">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Neander|ROM:inst22|altsyncram:Mux1_rtl_0" CBX_FILE_NAME="altsyncram_8hv.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

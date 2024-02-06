@@ -1,0 +1,122 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 18:15:38  January 23, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Neander_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name TOP_LEVEL_ENTITY Neander
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:15:38  JANUARY 23, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE PC.bdf
+set_global_assignment -name BDF_FILE MUX31_1B.bdf
+set_global_assignment -name BDF_FILE Neander.bdf
+set_global_assignment -name BDF_FILE Adder_8B.bdf
+set_global_assignment -name BDF_FILE AC.bdf
+set_global_assignment -name BDF_FILE Encoder_ULA.bdf
+set_global_assignment -name BDF_FILE REG_FLAGS_NZ.bdf
+set_global_assignment -name BDF_FILE RDM.bdf
+set_global_assignment -name BDF_FILE RI_opcode.bdf
+set_global_assignment -name VHDL_FILE ROM.vhd
+set_global_assignment -name BDF_FILE unid_cont.bdf
+set_global_assignment -name BDF_FILE dec_instrucao.bdf
+set_global_assignment -name BDF_FILE mux21_1b.bdf
+set_global_assignment -name BDF_FILE divfreq.bdf
+set_global_assignment -name BDF_FILE rem.bdf
+set_global_assignment -name BDF_FILE mux21_8b.bdf
+set_global_assignment -name BDF_FILE auxsomador.bdf
+set_global_assignment -name BDF_FILE ula.bdf
+set_global_assignment -name BDF_FILE fa.bdf
+set_global_assignment -name BDF_FILE ha.bdf
+set_global_assignment -name BDF_FILE temporizador.bdf
+set_global_assignment -name BDF_FILE dec_3_8.bdf
+set_global_assignment -name BDF_FILE BCD_AC.bdf
+set_global_assignment -name BDF_FILE BCD_PC.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name BDF_FILE bcd_a.bdf
+set_global_assignment -name BDF_FILE bcd_b.bdf
+set_global_assignment -name BDF_FILE bcd_c.bdf
+set_global_assignment -name BDF_FILE bcd_d.bdf
+set_global_assignment -name BDF_FILE bcd_e.bdf
+set_global_assignment -name BDF_FILE bcd_f.bdf
+set_global_assignment -name BDF_FILE bcd_g.bdf
+set_location_assignment PIN_D15 -to AC_A0
+set_location_assignment PIN_A16 -to AC_B0
+set_location_assignment PIN_B16 -to AC_C0
+set_location_assignment PIN_E15 -to AC_D0
+set_location_assignment PIN_A17 -to AC_E0
+set_location_assignment PIN_B17 -to AC_F0
+set_location_assignment PIN_F14 -to AC_G0
+set_location_assignment PIN_B18 -to AC_A1
+set_location_assignment PIN_F15 -to AC_B1
+set_location_assignment PIN_A19 -to AC_C1
+set_location_assignment PIN_B19 -to AC_D1
+set_location_assignment PIN_C19 -to AC_E1
+set_location_assignment PIN_D19 -to AC_F1
+set_location_assignment PIN_G15 -to AC_G1
+set_location_assignment PIN_E11 -to PC_A0
+set_location_assignment PIN_F11 -to PC_B0
+set_location_assignment PIN_H12 -to PC_C0
+set_location_assignment PIN_H13 -to PC_D0
+set_location_assignment PIN_G12 -to PC_E0
+set_location_assignment PIN_F12 -to PC_F0
+set_location_assignment PIN_F13 -to PC_G0
+set_location_assignment PIN_A13 -to PC_A1
+set_location_assignment PIN_B13 -to PC_B1
+set_location_assignment PIN_C13 -to PC_C1
+set_location_assignment PIN_A14 -to PC_D1
+set_location_assignment PIN_B14 -to PC_E1
+set_location_assignment PIN_E14 -to PC_F1
+set_location_assignment PIN_A15 -to PC_G1
+set_location_assignment PIN_J6 -to step_mode_switch
+set_location_assignment PIN_H2 -to clear
+set_location_assignment PIN_G3 -to step_button
+set_location_assignment PIN_J1 -to flag_N
+set_location_assignment PIN_J2 -to flag_Z
+set_location_assignment PIN_E1 -to HLT
+set_location_assignment PIN_G21 -to clock_in
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
