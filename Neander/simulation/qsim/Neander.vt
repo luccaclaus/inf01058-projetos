@@ -1,0 +1,941 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/07/2024 08:45:28"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Neander
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Neander_vlg_sample_tst(
+	clear,
+	clock_in,
+	step_button,
+	step_mode_switch,
+	sampler_tx
+);
+input  clear;
+input  clock_in;
+input  step_button;
+input  step_mode_switch;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clear or clock_in or step_button or step_mode_switch)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Neander_vlg_check_tst (
+	AC_A0,
+	AC_A1,
+	AC_B0,
+	AC_B1,
+	AC_C0,
+	AC_C1,
+	AC_D0,
+	AC_D1,
+	AC_E0,
+	AC_E1,
+	AC_F0,
+	AC_F1,
+	AC_G0,
+	AC_G1,
+	AC_OUT,
+	CARGA_AC,
+	CARGA_NZ,
+	CARGA_PC,
+	CARGA_RDM,
+	CARGA_REM,
+	CARGA_RI,
+	flag_N,
+	flag_Z,
+	GOTO_t0,
+	HLT,
+	INCREMENTA_PC,
+	PC_A0,
+	PC_A1,
+	PC_B0,
+	PC_B1,
+	PC_C0,
+	PC_C1,
+	PC_D0,
+	PC_D1,
+	PC_E0,
+	PC_E1,
+	PC_F0,
+	PC_F1,
+	PC_G0,
+	PC_G1,
+	PC_OUT,
+	READ,
+	SEL,
+	ULA_ADD,
+	ULA_AND,
+	ULA_NOT,
+	ULA_OR,
+	ULA_Y,
+	WRITE,
+	sampler_rx
+);
+input  AC_A0;
+input  AC_A1;
+input  AC_B0;
+input  AC_B1;
+input  AC_C0;
+input  AC_C1;
+input  AC_D0;
+input  AC_D1;
+input  AC_E0;
+input  AC_E1;
+input  AC_F0;
+input  AC_F1;
+input  AC_G0;
+input  AC_G1;
+input [7:0] AC_OUT;
+input  CARGA_AC;
+input  CARGA_NZ;
+input  CARGA_PC;
+input  CARGA_RDM;
+input  CARGA_REM;
+input  CARGA_RI;
+input  flag_N;
+input  flag_Z;
+input  GOTO_t0;
+input  HLT;
+input  INCREMENTA_PC;
+input  PC_A0;
+input  PC_A1;
+input  PC_B0;
+input  PC_B1;
+input  PC_C0;
+input  PC_C1;
+input  PC_D0;
+input  PC_D1;
+input  PC_E0;
+input  PC_E1;
+input  PC_F0;
+input  PC_F1;
+input  PC_G0;
+input  PC_G1;
+input [7:0] PC_OUT;
+input  READ;
+input  SEL;
+input  ULA_ADD;
+input  ULA_AND;
+input  ULA_NOT;
+input  ULA_OR;
+input  ULA_Y;
+input  WRITE;
+input sampler_rx;
+
+reg  AC_A0_expected;
+reg  AC_A1_expected;
+reg  AC_B0_expected;
+reg  AC_B1_expected;
+reg  AC_C0_expected;
+reg  AC_C1_expected;
+reg  AC_D0_expected;
+reg  AC_D1_expected;
+reg  AC_E0_expected;
+reg  AC_E1_expected;
+reg  AC_F0_expected;
+reg  AC_F1_expected;
+reg  AC_G0_expected;
+reg  AC_G1_expected;
+reg [7:0] AC_OUT_expected;
+reg  CARGA_AC_expected;
+reg  CARGA_NZ_expected;
+reg  CARGA_PC_expected;
+reg  CARGA_RDM_expected;
+reg  CARGA_REM_expected;
+reg  CARGA_RI_expected;
+reg  flag_N_expected;
+reg  flag_Z_expected;
+reg  GOTO_t0_expected;
+reg  HLT_expected;
+reg  INCREMENTA_PC_expected;
+reg  PC_A0_expected;
+reg  PC_A1_expected;
+reg  PC_B0_expected;
+reg  PC_B1_expected;
+reg  PC_C0_expected;
+reg  PC_C1_expected;
+reg  PC_D0_expected;
+reg  PC_D1_expected;
+reg  PC_E0_expected;
+reg  PC_E1_expected;
+reg  PC_F0_expected;
+reg  PC_F1_expected;
+reg  PC_G0_expected;
+reg  PC_G1_expected;
+reg [7:0] PC_OUT_expected;
+reg  READ_expected;
+reg  SEL_expected;
+reg  ULA_ADD_expected;
+reg  ULA_AND_expected;
+reg  ULA_NOT_expected;
+reg  ULA_OR_expected;
+reg  ULA_Y_expected;
+reg  WRITE_expected;
+
+reg  AC_A0_prev;
+reg  AC_A1_prev;
+reg  AC_B0_prev;
+reg  AC_B1_prev;
+reg  AC_C0_prev;
+reg  AC_C1_prev;
+reg  AC_D0_prev;
+reg  AC_D1_prev;
+reg  AC_E0_prev;
+reg  AC_E1_prev;
+reg  AC_F0_prev;
+reg  AC_F1_prev;
+reg  AC_G0_prev;
+reg  AC_G1_prev;
+reg [7:0] AC_OUT_prev;
+reg  CARGA_AC_prev;
+reg  CARGA_NZ_prev;
+reg  CARGA_PC_prev;
+reg  CARGA_RDM_prev;
+reg  CARGA_REM_prev;
+reg  CARGA_RI_prev;
+reg  flag_N_prev;
+reg  flag_Z_prev;
+reg  GOTO_t0_prev;
+reg  HLT_prev;
+reg  INCREMENTA_PC_prev;
+reg  PC_A0_prev;
+reg  PC_A1_prev;
+reg  PC_B0_prev;
+reg  PC_B1_prev;
+reg  PC_C0_prev;
+reg  PC_C1_prev;
+reg  PC_D0_prev;
+reg  PC_D1_prev;
+reg  PC_E0_prev;
+reg  PC_E1_prev;
+reg  PC_F0_prev;
+reg  PC_F1_prev;
+reg  PC_G0_prev;
+reg  PC_G1_prev;
+reg [7:0] PC_OUT_prev;
+reg  READ_prev;
+reg  SEL_prev;
+reg  ULA_ADD_prev;
+reg  ULA_AND_prev;
+reg  ULA_NOT_prev;
+reg  ULA_OR_prev;
+reg  ULA_Y_prev;
+reg  WRITE_prev;
+
+reg [7:0] AC_OUT_expected_prev;
+reg  flag_N_expected_prev;
+reg  flag_Z_expected_prev;
+reg  HLT_expected_prev;
+reg [7:0] PC_OUT_expected_prev;
+
+reg [7:0] last_AC_OUT_exp;
+reg  last_flag_N_exp;
+reg  last_flag_Z_exp;
+reg  last_HLT_exp;
+reg [7:0] last_PC_OUT_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:49] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 49'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	AC_A0_prev = AC_A0;
+	AC_A1_prev = AC_A1;
+	AC_B0_prev = AC_B0;
+	AC_B1_prev = AC_B1;
+	AC_C0_prev = AC_C0;
+	AC_C1_prev = AC_C1;
+	AC_D0_prev = AC_D0;
+	AC_D1_prev = AC_D1;
+	AC_E0_prev = AC_E0;
+	AC_E1_prev = AC_E1;
+	AC_F0_prev = AC_F0;
+	AC_F1_prev = AC_F1;
+	AC_G0_prev = AC_G0;
+	AC_G1_prev = AC_G1;
+	AC_OUT_prev = AC_OUT;
+	CARGA_AC_prev = CARGA_AC;
+	CARGA_NZ_prev = CARGA_NZ;
+	CARGA_PC_prev = CARGA_PC;
+	CARGA_RDM_prev = CARGA_RDM;
+	CARGA_REM_prev = CARGA_REM;
+	CARGA_RI_prev = CARGA_RI;
+	flag_N_prev = flag_N;
+	flag_Z_prev = flag_Z;
+	GOTO_t0_prev = GOTO_t0;
+	HLT_prev = HLT;
+	INCREMENTA_PC_prev = INCREMENTA_PC;
+	PC_A0_prev = PC_A0;
+	PC_A1_prev = PC_A1;
+	PC_B0_prev = PC_B0;
+	PC_B1_prev = PC_B1;
+	PC_C0_prev = PC_C0;
+	PC_C1_prev = PC_C1;
+	PC_D0_prev = PC_D0;
+	PC_D1_prev = PC_D1;
+	PC_E0_prev = PC_E0;
+	PC_E1_prev = PC_E1;
+	PC_F0_prev = PC_F0;
+	PC_F1_prev = PC_F1;
+	PC_G0_prev = PC_G0;
+	PC_G1_prev = PC_G1;
+	PC_OUT_prev = PC_OUT;
+	READ_prev = READ;
+	SEL_prev = SEL;
+	ULA_ADD_prev = ULA_ADD;
+	ULA_AND_prev = ULA_AND;
+	ULA_NOT_prev = ULA_NOT;
+	ULA_OR_prev = ULA_OR;
+	ULA_Y_prev = ULA_Y;
+	WRITE_prev = WRITE;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	AC_OUT_expected_prev = AC_OUT_expected;
+	flag_N_expected_prev = flag_N_expected;
+	flag_Z_expected_prev = flag_Z_expected;
+	HLT_expected_prev = HLT_expected;
+	PC_OUT_expected_prev = PC_OUT_expected;
+end
+
+
+// expected PC_OUT[ 7 ]
+initial
+begin
+	PC_OUT_expected[7] = 1'bX;
+end 
+// expected PC_OUT[ 6 ]
+initial
+begin
+	PC_OUT_expected[6] = 1'bX;
+end 
+// expected PC_OUT[ 5 ]
+initial
+begin
+	PC_OUT_expected[5] = 1'bX;
+end 
+// expected PC_OUT[ 4 ]
+initial
+begin
+	PC_OUT_expected[4] = 1'bX;
+end 
+// expected PC_OUT[ 3 ]
+initial
+begin
+	PC_OUT_expected[3] = 1'bX;
+end 
+// expected PC_OUT[ 2 ]
+initial
+begin
+	PC_OUT_expected[2] = 1'bX;
+end 
+// expected PC_OUT[ 1 ]
+initial
+begin
+	PC_OUT_expected[1] = 1'bX;
+end 
+// expected PC_OUT[ 0 ]
+initial
+begin
+	PC_OUT_expected[0] = 1'bX;
+end 
+// expected AC_OUT[ 7 ]
+initial
+begin
+	AC_OUT_expected[7] = 1'bX;
+end 
+// expected AC_OUT[ 6 ]
+initial
+begin
+	AC_OUT_expected[6] = 1'bX;
+end 
+// expected AC_OUT[ 5 ]
+initial
+begin
+	AC_OUT_expected[5] = 1'bX;
+end 
+// expected AC_OUT[ 4 ]
+initial
+begin
+	AC_OUT_expected[4] = 1'bX;
+end 
+// expected AC_OUT[ 3 ]
+initial
+begin
+	AC_OUT_expected[3] = 1'bX;
+end 
+// expected AC_OUT[ 2 ]
+initial
+begin
+	AC_OUT_expected[2] = 1'bX;
+end 
+// expected AC_OUT[ 1 ]
+initial
+begin
+	AC_OUT_expected[1] = 1'bX;
+end 
+// expected AC_OUT[ 0 ]
+initial
+begin
+	AC_OUT_expected[0] = 1'bX;
+end 
+
+// expected flag_N
+initial
+begin
+	flag_N_expected = 1'bX;
+end 
+
+// expected flag_Z
+initial
+begin
+	flag_Z_expected = 1'bX;
+end 
+
+// expected HLT
+initial
+begin
+	HLT_expected = 1'bX;
+end 
+// generate trigger
+always @(AC_A0_expected or AC_A0 or AC_A1_expected or AC_A1 or AC_B0_expected or AC_B0 or AC_B1_expected or AC_B1 or AC_C0_expected or AC_C0 or AC_C1_expected or AC_C1 or AC_D0_expected or AC_D0 or AC_D1_expected or AC_D1 or AC_E0_expected or AC_E0 or AC_E1_expected or AC_E1 or AC_F0_expected or AC_F0 or AC_F1_expected or AC_F1 or AC_G0_expected or AC_G0 or AC_G1_expected or AC_G1 or AC_OUT_expected or AC_OUT or CARGA_AC_expected or CARGA_AC or CARGA_NZ_expected or CARGA_NZ or CARGA_PC_expected or CARGA_PC or CARGA_RDM_expected or CARGA_RDM or CARGA_REM_expected or CARGA_REM or CARGA_RI_expected or CARGA_RI or flag_N_expected or flag_N or flag_Z_expected or flag_Z or GOTO_t0_expected or GOTO_t0 or HLT_expected or HLT or INCREMENTA_PC_expected or INCREMENTA_PC or PC_A0_expected or PC_A0 or PC_A1_expected or PC_A1 or PC_B0_expected or PC_B0 or PC_B1_expected or PC_B1 or PC_C0_expected or PC_C0 or PC_C1_expected or PC_C1 or PC_D0_expected or PC_D0 or PC_D1_expected or PC_D1 or PC_E0_expected or PC_E0 or PC_E1_expected or PC_E1 or PC_F0_expected or PC_F0 or PC_F1_expected or PC_F1 or PC_G0_expected or PC_G0 or PC_G1_expected or PC_G1 or PC_OUT_expected or PC_OUT or READ_expected or READ or SEL_expected or SEL or ULA_ADD_expected or ULA_ADD or ULA_AND_expected or ULA_AND or ULA_NOT_expected or ULA_NOT or ULA_OR_expected or ULA_OR or ULA_Y_expected or ULA_Y or WRITE_expected or WRITE)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected AC_A0 = %b | expected AC_A1 = %b | expected AC_B0 = %b | expected AC_B1 = %b | expected AC_C0 = %b | expected AC_C1 = %b | expected AC_D0 = %b | expected AC_D1 = %b | expected AC_E0 = %b | expected AC_E1 = %b | expected AC_F0 = %b | expected AC_F1 = %b | expected AC_G0 = %b | expected AC_G1 = %b | expected AC_OUT = %b | expected CARGA_AC = %b | expected CARGA_NZ = %b | expected CARGA_PC = %b | expected CARGA_RDM = %b | expected CARGA_REM = %b | expected CARGA_RI = %b | expected flag_N = %b | expected flag_Z = %b | expected GOTO_t0 = %b | expected HLT = %b | expected INCREMENTA_PC = %b | expected PC_A0 = %b | expected PC_A1 = %b | expected PC_B0 = %b | expected PC_B1 = %b | expected PC_C0 = %b | expected PC_C1 = %b | expected PC_D0 = %b | expected PC_D1 = %b | expected PC_E0 = %b | expected PC_E1 = %b | expected PC_F0 = %b | expected PC_F1 = %b | expected PC_G0 = %b | expected PC_G1 = %b | expected PC_OUT = %b | expected READ = %b | expected SEL = %b | expected ULA_ADD = %b | expected ULA_AND = %b | expected ULA_NOT = %b | expected ULA_OR = %b | expected ULA_Y = %b | expected WRITE = %b | ",AC_A0_expected_prev,AC_A1_expected_prev,AC_B0_expected_prev,AC_B1_expected_prev,AC_C0_expected_prev,AC_C1_expected_prev,AC_D0_expected_prev,AC_D1_expected_prev,AC_E0_expected_prev,AC_E1_expected_prev,AC_F0_expected_prev,AC_F1_expected_prev,AC_G0_expected_prev,AC_G1_expected_prev,AC_OUT_expected_prev,CARGA_AC_expected_prev,CARGA_NZ_expected_prev,CARGA_PC_expected_prev,CARGA_RDM_expected_prev,CARGA_REM_expected_prev,CARGA_RI_expected_prev,flag_N_expected_prev,flag_Z_expected_prev,GOTO_t0_expected_prev,HLT_expected_prev,INCREMENTA_PC_expected_prev,PC_A0_expected_prev,PC_A1_expected_prev,PC_B0_expected_prev,PC_B1_expected_prev,PC_C0_expected_prev,PC_C1_expected_prev,PC_D0_expected_prev,PC_D1_expected_prev,PC_E0_expected_prev,PC_E1_expected_prev,PC_F0_expected_prev,PC_F1_expected_prev,PC_G0_expected_prev,PC_G1_expected_prev,PC_OUT_expected_prev,READ_expected_prev,SEL_expected_prev,ULA_ADD_expected_prev,ULA_AND_expected_prev,ULA_NOT_expected_prev,ULA_OR_expected_prev,ULA_Y_expected_prev,WRITE_expected_prev);
+	$display("| real AC_A0 = %b | real AC_A1 = %b | real AC_B0 = %b | real AC_B1 = %b | real AC_C0 = %b | real AC_C1 = %b | real AC_D0 = %b | real AC_D1 = %b | real AC_E0 = %b | real AC_E1 = %b | real AC_F0 = %b | real AC_F1 = %b | real AC_G0 = %b | real AC_G1 = %b | real AC_OUT = %b | real CARGA_AC = %b | real CARGA_NZ = %b | real CARGA_PC = %b | real CARGA_RDM = %b | real CARGA_REM = %b | real CARGA_RI = %b | real flag_N = %b | real flag_Z = %b | real GOTO_t0 = %b | real HLT = %b | real INCREMENTA_PC = %b | real PC_A0 = %b | real PC_A1 = %b | real PC_B0 = %b | real PC_B1 = %b | real PC_C0 = %b | real PC_C1 = %b | real PC_D0 = %b | real PC_D1 = %b | real PC_E0 = %b | real PC_E1 = %b | real PC_F0 = %b | real PC_F1 = %b | real PC_G0 = %b | real PC_G1 = %b | real PC_OUT = %b | real READ = %b | real SEL = %b | real ULA_ADD = %b | real ULA_AND = %b | real ULA_NOT = %b | real ULA_OR = %b | real ULA_Y = %b | real WRITE = %b | ",AC_A0_prev,AC_A1_prev,AC_B0_prev,AC_B1_prev,AC_C0_prev,AC_C1_prev,AC_D0_prev,AC_D1_prev,AC_E0_prev,AC_E1_prev,AC_F0_prev,AC_F1_prev,AC_G0_prev,AC_G1_prev,AC_OUT_prev,CARGA_AC_prev,CARGA_NZ_prev,CARGA_PC_prev,CARGA_RDM_prev,CARGA_REM_prev,CARGA_RI_prev,flag_N_prev,flag_Z_prev,GOTO_t0_prev,HLT_prev,INCREMENTA_PC_prev,PC_A0_prev,PC_A1_prev,PC_B0_prev,PC_B1_prev,PC_C0_prev,PC_C1_prev,PC_D0_prev,PC_D1_prev,PC_E0_prev,PC_E1_prev,PC_F0_prev,PC_F1_prev,PC_G0_prev,PC_G1_prev,PC_OUT_prev,READ_prev,SEL_prev,ULA_ADD_prev,ULA_AND_prev,ULA_NOT_prev,ULA_OR_prev,ULA_Y_prev,WRITE_prev);
+`endif
+	if (
+		( AC_OUT_expected_prev[0] !== 1'bx ) && ( AC_OUT_prev[0] !== AC_OUT_expected_prev[0] )
+		&& ((AC_OUT_expected_prev[0] !== last_AC_OUT_exp[0]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[0] = AC_OUT_expected_prev[0];
+	end
+	if (
+		( AC_OUT_expected_prev[1] !== 1'bx ) && ( AC_OUT_prev[1] !== AC_OUT_expected_prev[1] )
+		&& ((AC_OUT_expected_prev[1] !== last_AC_OUT_exp[1]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[1] = AC_OUT_expected_prev[1];
+	end
+	if (
+		( AC_OUT_expected_prev[2] !== 1'bx ) && ( AC_OUT_prev[2] !== AC_OUT_expected_prev[2] )
+		&& ((AC_OUT_expected_prev[2] !== last_AC_OUT_exp[2]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[2] = AC_OUT_expected_prev[2];
+	end
+	if (
+		( AC_OUT_expected_prev[3] !== 1'bx ) && ( AC_OUT_prev[3] !== AC_OUT_expected_prev[3] )
+		&& ((AC_OUT_expected_prev[3] !== last_AC_OUT_exp[3]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[3] = AC_OUT_expected_prev[3];
+	end
+	if (
+		( AC_OUT_expected_prev[4] !== 1'bx ) && ( AC_OUT_prev[4] !== AC_OUT_expected_prev[4] )
+		&& ((AC_OUT_expected_prev[4] !== last_AC_OUT_exp[4]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[4] = AC_OUT_expected_prev[4];
+	end
+	if (
+		( AC_OUT_expected_prev[5] !== 1'bx ) && ( AC_OUT_prev[5] !== AC_OUT_expected_prev[5] )
+		&& ((AC_OUT_expected_prev[5] !== last_AC_OUT_exp[5]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[5] = AC_OUT_expected_prev[5];
+	end
+	if (
+		( AC_OUT_expected_prev[6] !== 1'bx ) && ( AC_OUT_prev[6] !== AC_OUT_expected_prev[6] )
+		&& ((AC_OUT_expected_prev[6] !== last_AC_OUT_exp[6]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[6] = AC_OUT_expected_prev[6];
+	end
+	if (
+		( AC_OUT_expected_prev[7] !== 1'bx ) && ( AC_OUT_prev[7] !== AC_OUT_expected_prev[7] )
+		&& ((AC_OUT_expected_prev[7] !== last_AC_OUT_exp[7]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port AC_OUT[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", AC_OUT_expected_prev);
+		$display ("     Real value = %b", AC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_AC_OUT_exp[7] = AC_OUT_expected_prev[7];
+	end
+	if (
+		( flag_N_expected_prev !== 1'bx ) && ( flag_N_prev !== flag_N_expected_prev )
+		&& ((flag_N_expected_prev !== last_flag_N_exp) ||
+			on_first_change[22])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port flag_N :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", flag_N_expected_prev);
+		$display ("     Real value = %b", flag_N_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[22] = 1'b0;
+		last_flag_N_exp = flag_N_expected_prev;
+	end
+	if (
+		( flag_Z_expected_prev !== 1'bx ) && ( flag_Z_prev !== flag_Z_expected_prev )
+		&& ((flag_Z_expected_prev !== last_flag_Z_exp) ||
+			on_first_change[23])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port flag_Z :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", flag_Z_expected_prev);
+		$display ("     Real value = %b", flag_Z_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[23] = 1'b0;
+		last_flag_Z_exp = flag_Z_expected_prev;
+	end
+	if (
+		( HLT_expected_prev !== 1'bx ) && ( HLT_prev !== HLT_expected_prev )
+		&& ((HLT_expected_prev !== last_HLT_exp) ||
+			on_first_change[25])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HLT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HLT_expected_prev);
+		$display ("     Real value = %b", HLT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[25] = 1'b0;
+		last_HLT_exp = HLT_expected_prev;
+	end
+	if (
+		( PC_OUT_expected_prev[0] !== 1'bx ) && ( PC_OUT_prev[0] !== PC_OUT_expected_prev[0] )
+		&& ((PC_OUT_expected_prev[0] !== last_PC_OUT_exp[0]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[0] = PC_OUT_expected_prev[0];
+	end
+	if (
+		( PC_OUT_expected_prev[1] !== 1'bx ) && ( PC_OUT_prev[1] !== PC_OUT_expected_prev[1] )
+		&& ((PC_OUT_expected_prev[1] !== last_PC_OUT_exp[1]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[1] = PC_OUT_expected_prev[1];
+	end
+	if (
+		( PC_OUT_expected_prev[2] !== 1'bx ) && ( PC_OUT_prev[2] !== PC_OUT_expected_prev[2] )
+		&& ((PC_OUT_expected_prev[2] !== last_PC_OUT_exp[2]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[2] = PC_OUT_expected_prev[2];
+	end
+	if (
+		( PC_OUT_expected_prev[3] !== 1'bx ) && ( PC_OUT_prev[3] !== PC_OUT_expected_prev[3] )
+		&& ((PC_OUT_expected_prev[3] !== last_PC_OUT_exp[3]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[3] = PC_OUT_expected_prev[3];
+	end
+	if (
+		( PC_OUT_expected_prev[4] !== 1'bx ) && ( PC_OUT_prev[4] !== PC_OUT_expected_prev[4] )
+		&& ((PC_OUT_expected_prev[4] !== last_PC_OUT_exp[4]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[4] = PC_OUT_expected_prev[4];
+	end
+	if (
+		( PC_OUT_expected_prev[5] !== 1'bx ) && ( PC_OUT_prev[5] !== PC_OUT_expected_prev[5] )
+		&& ((PC_OUT_expected_prev[5] !== last_PC_OUT_exp[5]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[5] = PC_OUT_expected_prev[5];
+	end
+	if (
+		( PC_OUT_expected_prev[6] !== 1'bx ) && ( PC_OUT_prev[6] !== PC_OUT_expected_prev[6] )
+		&& ((PC_OUT_expected_prev[6] !== last_PC_OUT_exp[6]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[6] = PC_OUT_expected_prev[6];
+	end
+	if (
+		( PC_OUT_expected_prev[7] !== 1'bx ) && ( PC_OUT_prev[7] !== PC_OUT_expected_prev[7] )
+		&& ((PC_OUT_expected_prev[7] !== last_PC_OUT_exp[7]) ||
+			on_first_change[41])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PC_OUT[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PC_OUT_expected_prev);
+		$display ("     Real value = %b", PC_OUT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[41] = 1'b0;
+		last_PC_OUT_exp[7] = PC_OUT_expected_prev[7];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Neander_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clear;
+reg clock_in;
+reg step_button;
+reg step_mode_switch;
+// wires                                               
+wire AC_A0;
+wire AC_A1;
+wire AC_B0;
+wire AC_B1;
+wire AC_C0;
+wire AC_C1;
+wire AC_D0;
+wire AC_D1;
+wire AC_E0;
+wire AC_E1;
+wire AC_F0;
+wire AC_F1;
+wire AC_G0;
+wire AC_G1;
+wire [7:0] AC_OUT;
+wire CARGA_AC;
+wire CARGA_NZ;
+wire CARGA_PC;
+wire CARGA_RDM;
+wire CARGA_REM;
+wire CARGA_RI;
+wire flag_N;
+wire flag_Z;
+wire GOTO_t0;
+wire HLT;
+wire INCREMENTA_PC;
+wire PC_A0;
+wire PC_A1;
+wire PC_B0;
+wire PC_B1;
+wire PC_C0;
+wire PC_C1;
+wire PC_D0;
+wire PC_D1;
+wire PC_E0;
+wire PC_E1;
+wire PC_F0;
+wire PC_F1;
+wire PC_G0;
+wire PC_G1;
+wire [7:0] PC_OUT;
+wire READ;
+wire SEL;
+wire ULA_ADD;
+wire ULA_AND;
+wire ULA_NOT;
+wire ULA_OR;
+wire ULA_Y;
+wire WRITE;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Neander i1 (
+// port map - connection between master ports and signals/registers   
+	.AC_A0(AC_A0),
+	.AC_A1(AC_A1),
+	.AC_B0(AC_B0),
+	.AC_B1(AC_B1),
+	.AC_C0(AC_C0),
+	.AC_C1(AC_C1),
+	.AC_D0(AC_D0),
+	.AC_D1(AC_D1),
+	.AC_E0(AC_E0),
+	.AC_E1(AC_E1),
+	.AC_F0(AC_F0),
+	.AC_F1(AC_F1),
+	.AC_G0(AC_G0),
+	.AC_G1(AC_G1),
+	.AC_OUT(AC_OUT),
+	.CARGA_AC(CARGA_AC),
+	.CARGA_NZ(CARGA_NZ),
+	.CARGA_PC(CARGA_PC),
+	.CARGA_RDM(CARGA_RDM),
+	.CARGA_REM(CARGA_REM),
+	.CARGA_RI(CARGA_RI),
+	.clear(clear),
+	.clock_in(clock_in),
+	.flag_N(flag_N),
+	.flag_Z(flag_Z),
+	.GOTO_t0(GOTO_t0),
+	.HLT(HLT),
+	.INCREMENTA_PC(INCREMENTA_PC),
+	.PC_A0(PC_A0),
+	.PC_A1(PC_A1),
+	.PC_B0(PC_B0),
+	.PC_B1(PC_B1),
+	.PC_C0(PC_C0),
+	.PC_C1(PC_C1),
+	.PC_D0(PC_D0),
+	.PC_D1(PC_D1),
+	.PC_E0(PC_E0),
+	.PC_E1(PC_E1),
+	.PC_F0(PC_F0),
+	.PC_F1(PC_F1),
+	.PC_G0(PC_G0),
+	.PC_G1(PC_G1),
+	.PC_OUT(PC_OUT),
+	.READ(READ),
+	.SEL(SEL),
+	.step_button(step_button),
+	.step_mode_switch(step_mode_switch),
+	.ULA_ADD(ULA_ADD),
+	.ULA_AND(ULA_AND),
+	.ULA_NOT(ULA_NOT),
+	.ULA_OR(ULA_OR),
+	.ULA_Y(ULA_Y),
+	.WRITE(WRITE)
+);
+
+// clear
+initial
+begin
+	clear = 1'b0;
+	clear = #10000 1'b1;
+end 
+
+// step_mode_switch
+initial
+begin
+	step_mode_switch = 1'b1;
+end 
+
+// step_button
+initial
+begin
+	repeat(55)
+	begin
+		step_button = 1'b0;
+		step_button = #9000 1'b1;
+		# 9000;
+	end
+	step_button = 1'b0;
+	step_button = #9000 1'b1;
+end 
+
+Neander_vlg_sample_tst tb_sample (
+	.clear(clear),
+	.clock_in(clock_in),
+	.step_button(step_button),
+	.step_mode_switch(step_mode_switch),
+	.sampler_tx(sampler)
+);
+
+Neander_vlg_check_tst tb_out(
+	.AC_A0(AC_A0),
+	.AC_A1(AC_A1),
+	.AC_B0(AC_B0),
+	.AC_B1(AC_B1),
+	.AC_C0(AC_C0),
+	.AC_C1(AC_C1),
+	.AC_D0(AC_D0),
+	.AC_D1(AC_D1),
+	.AC_E0(AC_E0),
+	.AC_E1(AC_E1),
+	.AC_F0(AC_F0),
+	.AC_F1(AC_F1),
+	.AC_G0(AC_G0),
+	.AC_G1(AC_G1),
+	.AC_OUT(AC_OUT),
+	.CARGA_AC(CARGA_AC),
+	.CARGA_NZ(CARGA_NZ),
+	.CARGA_PC(CARGA_PC),
+	.CARGA_RDM(CARGA_RDM),
+	.CARGA_REM(CARGA_REM),
+	.CARGA_RI(CARGA_RI),
+	.flag_N(flag_N),
+	.flag_Z(flag_Z),
+	.GOTO_t0(GOTO_t0),
+	.HLT(HLT),
+	.INCREMENTA_PC(INCREMENTA_PC),
+	.PC_A0(PC_A0),
+	.PC_A1(PC_A1),
+	.PC_B0(PC_B0),
+	.PC_B1(PC_B1),
+	.PC_C0(PC_C0),
+	.PC_C1(PC_C1),
+	.PC_D0(PC_D0),
+	.PC_D1(PC_D1),
+	.PC_E0(PC_E0),
+	.PC_E1(PC_E1),
+	.PC_F0(PC_F0),
+	.PC_F1(PC_F1),
+	.PC_G0(PC_G0),
+	.PC_G1(PC_G1),
+	.PC_OUT(PC_OUT),
+	.READ(READ),
+	.SEL(SEL),
+	.ULA_ADD(ULA_ADD),
+	.ULA_AND(ULA_AND),
+	.ULA_NOT(ULA_NOT),
+	.ULA_OR(ULA_OR),
+	.ULA_Y(ULA_Y),
+	.WRITE(WRITE),
+	.sampler_rx(sampler)
+);
+endmodule
+
